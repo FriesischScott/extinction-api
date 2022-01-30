@@ -5,11 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 const app = express();
 
-app.use(
-  cors({
-    origin: ["http://127.0.0.1", "http://localhost"],
-  })
-);
+app.use(cors());
 
 app.get("/mammals", (req, res) => {
   res.send({
@@ -26,13 +22,13 @@ app.get("/mammals", (req, res) => {
       "Braunbär",
     ],
     threatened: [
-      "Zwerwal",
+      "Zwergwal",
       "Feldhamster",
       "Luchs",
       "Nymphenfledermaus",
       "Graues Langohr",
       "Hausratte",
-      "Große  Hufeisennase",
+      "Große Hufeisennase",
     ],
     endangered: [
       "Sumpfmaus",
